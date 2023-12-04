@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#0E0C0C"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- LinearLayout para mostrar distância e velocidade máxima -->
+    <LinearLayout
+        android:id="@+id/distanceSpeedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/distanceTextView"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="D: 0.0 "
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/digital7"
+            android:textSize="35sp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/maxSpeedTextView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="V. Máx: 0.0 "
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/digital7"
+            android:textSize="35sp"/>
+    </LinearLayout>
+
+    <!-- Seu layout existente -->
+    <LinearLayout
+        android:layout_below="@id/distanceSpeedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- TextViews existentes (velocidade e marcha) e outros componentes -->
+        <TextView
+            android:id="@+id/marchaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Marcha: N"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:background="#0E0C0C"
+            android:fontFamily="@font/digital7"
+            android:textColor="#FFFFFF"
+            android:padding="8dp"
+            android:elevation="2dp"
+            android:layout_marginBottom="16dp" />
+        <TextView
+            android:id="@+id/velocidadeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/digital7"
+            android:text="0.0"
+            android:textColor="#3498db"
+            android:textSize="100sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="km/h"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
+    </LinearLayout>
+</RelativeLayout>
